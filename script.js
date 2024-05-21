@@ -9,29 +9,18 @@ let resultPlay2 = "Jogador 2 venceu!"
 let resultEmpate = "Empate!"
 
     //resultado Player 1 WIN
-    if (player1 == papel && player2 == pedra){
-        return resultPlay1
-    } if (player1 == pedra && player2 == tesoura){
-        return resultPlay1
-    } if (player1 == tesoura && player2 == papel){
+    if ((player1 == papel && player2 == pedra) || (player1 == pedra && player2 == tesoura) || (player1 == tesoura && player2 == papel)){
         return resultPlay1
     }
-
+   
     //resultado Player 2 WIN
-    if(player1 == pedra && player2 == papel){
-        return resultPlay2
-    } if(player1 == tesoura && player2 == pedra){
-        return resultPlay2
-    } if(player1 == papel && player2 == tesoura){
+    if((player1 == pedra && player2 == papel) || (player1 == tesoura && player2 == pedra) || (player1 == papel && player2 == tesoura)){
         return resultPlay2
     }
 
     // resultado EMPATE
-    if(player1 == pedra && player2 == pedra){
+    if((player1 == pedra && player2 == pedra) || (player1 == papel && player2 == papel) || (player1 == tesoura && player2 == tesoura)){
         return resultEmpate
-    } if(player1 == papel && player2 == papel){
-        return resultEmpate
-    } if(player1 == tesoura && player2 == tesoura){
-        return resultEmpate
-    }
+    } 
+    
 }
